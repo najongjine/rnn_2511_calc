@@ -1,10 +1,13 @@
+import { useState } from "react";
 import { ScrollView, StyleSheet, Text, TextInput, View } from "react-native";
 
 export default function TabTwoScreen() {
+  const [myinput, setMyinput] = useState<string>("");
+  /* myinput 이랑 textinput 이랑 연결 해주기 */
   return (
     <ScrollView>
       <View>
-        <Text style={styles.blueText}>calc page</Text>
+        <Text style={{ color: "blue" }}>calc page</Text>
       </View>
       <View>
         <TextInput style={styles.orangeInput} />
