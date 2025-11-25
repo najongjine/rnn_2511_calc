@@ -4,10 +4,10 @@ export default function TabTwoScreen() {
   return (
     <ScrollView>
       <View>
-        <Text>calc page</Text>
+        <Text style={styles.blueText}>calc page</Text>
       </View>
       <View>
-        <TextInput />
+        <TextInput style={styles.orangeInput} />
       </View>
     </ScrollView>
   );
