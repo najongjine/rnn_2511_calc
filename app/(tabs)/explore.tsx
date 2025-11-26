@@ -10,6 +10,7 @@ import {
 
 export default function TabTwoScreen() {
   const [myinput, setMyinput] = useState<string>("");
+  const [result, setResult] = useState<string>("");
 
   function testadd() {
     let addoperator = myinput.includes("+");
@@ -18,9 +19,12 @@ export default function TabTwoScreen() {
       let num1 = Number(strnums[0]);
       let num2 = Number(strnums[1]);
       let result = num1 + num2;
+      setResult(result.toString());
     }
   }
-
+  /*
+  testadd() 랑 Button 연결하고, result 값 화면에 표시
+   */
   return (
     <ScrollView>
       <View>
@@ -33,7 +37,7 @@ export default function TabTwoScreen() {
         </View>
       </View>
       <View>
-        <Button title="계산하기" />
+        <Button title="계산하기" onPress={testadd} />
       </View>
     </ScrollView>
   );
