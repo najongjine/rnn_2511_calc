@@ -14,8 +14,12 @@ export default function TabTwoScreen() {
   const [result, setResult] = useState<string>("");
 
   function calc() {
-    let _result = evaluate(myinput);
-    setResult(_result);
+    try {
+      let _result = evaluate(myinput);
+      setResult(_result);
+    } catch (error: any) {
+      setResult(`에러. 계산할수 없는 수식입니다`);
+    }
   }
   /*
   1. calc를 계산하기 버튼에 연결하고,
