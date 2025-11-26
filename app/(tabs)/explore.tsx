@@ -33,7 +33,7 @@ export default function TabTwoScreen() {
       <View>
         <TextInput onChangeText={setMyinput} style={styles.orangeInput} />
         <View>
-          <Text>myinput에 잘 담겼니? {myinput}</Text>
+          <Text>result: {result}</Text>
         </View>
       </View>
       <View>
