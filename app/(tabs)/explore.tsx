@@ -1,3 +1,4 @@
+import { evaluate } from "mathjs";
 import { useState } from "react";
 import {
   Button,
@@ -12,15 +13,8 @@ export default function TabTwoScreen() {
   const [myinput, setMyinput] = useState<string>("");
   const [result, setResult] = useState<string>("");
 
-  function testadd() {
-    let addoperator = myinput.includes("+");
-    if (addoperator) {
-      let strnums = myinput.split("+");
-      let num1 = Number(strnums[0]);
-      let num2 = Number(strnums[1]);
-      let result = num1 + num2;
-      setResult(result.toString());
-    }
+  function calc() {
+    evaluate();
   }
   /*
   testadd() 랑 Button 연결하고, result 값 화면에 표시
