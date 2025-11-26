@@ -14,7 +14,8 @@ export default function TabTwoScreen() {
   const [result, setResult] = useState<string>("");
 
   function calc() {
-    evaluate();
+    let _result = evaluate(myinput);
+    setResult(_result);
   }
   /*
   1. calc를 계산하기 버튼에 연결하고,
@@ -32,7 +33,7 @@ export default function TabTwoScreen() {
         </View>
       </View>
       <View>
-        <Button title="계산하기" onPress={testadd} />
+        <Button title="계산하기" onPress={calc} />
       </View>
     </ScrollView>
   );
