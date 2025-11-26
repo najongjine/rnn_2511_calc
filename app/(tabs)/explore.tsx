@@ -31,7 +31,11 @@ export default function TabTwoScreen() {
         <Text style={{ color: "blue" }}>calc page</Text>
       </View>
       <View>
-        <TextInput onChangeText={setMyinput} style={styles.orangeInput} />
+        <TextInput
+          onChangeText={setMyinput}
+          onSubmitEditing={calc}
+          style={styles.orangeInput}
+        />
         <View>
           <Text>result: {result}</Text>
         </View>
