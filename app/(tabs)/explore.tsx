@@ -1,9 +1,25 @@
 import { useState } from "react";
-import { ScrollView, StyleSheet, Text, TextInput, View } from "react-native";
+import {
+  Button,
+  ScrollView,
+  StyleSheet,
+  Text,
+  TextInput,
+  View,
+} from "react-native";
 
 export default function TabTwoScreen() {
   const [myinput, setMyinput] = useState<string>("");
-  /* 계산하기 버튼 만들기 */
+
+  function testadd() {
+    let addoperator = myinput.includes("+");
+    if (addoperator) {
+      let strnums = myinput.split("+");
+      let num1 = Number(strnums[0]);
+      let num2 = Number(strnums[1]);
+      let result = num1 + num2;
+    }
+  }
 
   return (
     <ScrollView>
@@ -15,6 +31,9 @@ export default function TabTwoScreen() {
         <View>
           <Text>myinput에 잘 담겼니? {myinput}</Text>
         </View>
+      </View>
+      <View>
+        <Button title="계산하기" />
       </View>
     </ScrollView>
   );
