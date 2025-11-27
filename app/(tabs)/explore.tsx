@@ -10,7 +10,10 @@ import {
 } from "react-native";
 
 export default function TabTwoScreen() {
+  /** TextInput에 있는 값이 myinput에 담겨요 */
   const [myinput, setMyinput] = useState<string>("");
+
+  /**  <Text>result: {result}</Text> 여기에 결과로 표시되요 */
   const [result, setResult] = useState<string>("");
 
   /** 계산을 하는 함수.
