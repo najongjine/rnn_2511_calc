@@ -1,4 +1,4 @@
-import { evaluate } from "mathjs";
+import { evaluate, format } from "mathjs";
 import { useState } from "react";
 import {
   Button,
@@ -23,8 +23,12 @@ export default function TabTwoScreen() {
    * 계산을 하고, result 변수에 결과를 담는 일을 해요
    */
   function calc() {
+    let _result: any;
     try {
-      let _result = evaluate(myinput);
+      console.log(`# calc 진입`);
+      _result = evaluate(myinput);
+      _result = format(_result, { precision: 14 });
+      console.log(`# _result: `, _result);
       setResult(_result);
     } catch (error: any) {
       setResult(`에러. 계산할수 없는 수식입니다`);
