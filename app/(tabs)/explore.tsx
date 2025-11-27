@@ -13,6 +13,12 @@ export default function TabTwoScreen() {
   const [myinput, setMyinput] = useState<string>("");
   const [result, setResult] = useState<string>("");
 
+  /** 계산을 하는 함수.
+   * @param 매개변수 없음
+   * @returns 리턴값 없음
+   * @param 얘가 하는일은 myinput에 있는 문자열을 읽어서
+   * 계산을 하고, result 변수에 결과를 담는 일을 해요
+   */
   function calc() {
     try {
       let _result = evaluate(myinput);
